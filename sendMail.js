@@ -10,8 +10,13 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
-app.listen(process.env.PORT || 8000)
 //////////////////////////////////////////////////////////////////////////////
+
+const PORT = process.env.PORT || 8000
+
+app.listen(PORT, () => {
+    console.log(`Server listening at http://localhost:${PORT}`)
+})
 
 var transport = {
     host: 'smtp.gmail.com',
