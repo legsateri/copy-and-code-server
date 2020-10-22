@@ -1,1 +1,1 @@
-web: node sendMail.js 
+web: node src/server.js
